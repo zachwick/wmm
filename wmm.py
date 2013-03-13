@@ -30,6 +30,8 @@ class NoUnmanagedScreens(Exception):
 class WM(object):
     def __init__(self, display):
         self.display = display
+        self.max_width = self.display.screen(None).width_in_pixels
+        self.max_height = self.display.screen(None).height_in_pixels
         self.drag_window = None
         self.drag_offset = (0, 0)
 
@@ -132,9 +134,9 @@ class WM(object):
         if event.value_mask & Xlib.X.CWY:
             args['y'] = 0
         if event.value_mask & Xlib.X.CWWidth:
-            args['width'] = self.display.screen(None).width_in_pixels
+            args['width'] = self.max_width
         if event.value_mask & Xlib.X.CWHeight:
-            args['height'] = self.display.screen(None).height_in_pixels
+            args['height'] = self.max_height
         if event.value_mask & Xlib.X.CWSibling:
             args['sibling'] = event.above
         if event.value_mask & Xlib.X.CWStackMode:
