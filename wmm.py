@@ -126,15 +126,15 @@ class WM(object):
 
     def handle_configure_request(self, event):
         window = event.window
-        args = { 'border_width': 3 }
+        args = { 'border_width': 0 }
         if event.value_mask & Xlib.X.CWX:
-            args['x'] = event.x
+            args['x'] = 0
         if event.value_mask & Xlib.X.CWY:
-            args['y'] = event.y
+            args['y'] = 0
         if event.value_mask & Xlib.X.CWWidth:
-            args['width'] = event.width
+            args['width'] = self.display.screen(None).width_in_pixels
         if event.value_mask & Xlib.X.CWHeight:
-            args['height'] = event.height
+            args['height'] = self.display.screen(None).height_in_pixels
         if event.value_mask & Xlib.X.CWSibling:
             args['sibling'] = event.above
         if event.value_mask & Xlib.X.CWStackMode:
