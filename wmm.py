@@ -180,7 +180,7 @@ class WM(object):
     def handle_mouse_press(self, event):
         if event.detail == 3:
             # Right-click: raise window
-            event.window.configure(stack_mode=Xlib.X.Above)
+            event.window.configure(stack_mode=Xlib.X.Below)
 
     def handle_mouse_release(self, event):
         self.drag_window = None
