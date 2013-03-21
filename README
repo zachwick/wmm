@@ -2,6 +2,8 @@
 
 Based on TinyWM and TinyWM-XCB (Both released into the public domain)
 
+# License & Copyright
+
 Copyright 2013 ZachWick <zach@zachwick.com>
 
 This program is free software: you can redistribute it and/or modify
@@ -16,3 +18,28 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+# Building & Installing
+
+In order to build wmm, you must have gcc, xcb, and make available on your system.
+
+  make clean
+  make 
+  make install
+
+# Usage
+
+## Starting wmm
+
+In order to use wmm, simply put the following in your ~/.xinitrc:
+
+   xterm &
+   wmm
+
+This will start an xterm, send that xterm to a background process, and then start wmm.
+
+## Keybindings
+
+Mod1/Alt + Right-click sends the active window to the bottom of the stack
+This is the only keybinding in wmm
