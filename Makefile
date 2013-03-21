@@ -10,3 +10,7 @@ wmm: wmm.o
 
 wmm.o: wmm.c
 	gcc -std=gnu99 -c $< -o $@ -lxcb
+
+install:
+	sudo rm -f /usr/bin/wmm
+	sudo ln -s ./wmm /usr/bin/wmm
