@@ -13,4 +13,5 @@ wmm.o: wmm.c
 
 install:
 	sudo rm -f /usr/bin/wmm
-	sudo ln -s ./wmm /usr/bin/wmm
+	sudo rm -f /usr/local/bin/wmm
+	sudo cp wmm /usr/local/bin/wmm
