@@ -31,7 +31,6 @@ main(int argc, char **argv) {
 	xcb_drawable_t root;
 
 	xcb_generic_event_t *event;
-	xcb_get_geometry_reply_t *geometry;
 
 	// Connect the X11 server and check for connection errors
 	display = xcb_connect(NULL,NULL);
