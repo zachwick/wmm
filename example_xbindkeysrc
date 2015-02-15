@@ -1,0 +1,6 @@
+# Run dmenu in a wm agnostic way
+# This assumes that dmenu and xbindkeys are already installed
+# See 'man xbindkeys' for how to use this file
+
+"dmenu_run"
+Mod4 + p

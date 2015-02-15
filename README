@@ -4,7 +4,7 @@ Based on TinyWM and TinyWM-XCB (Both released into the public domain)
 
 # License & Copyright
 
-Copyright 2013 ZachWick <zach@zachwick.com>
+Copyright 2013-2015 zachwick <zach@zachwick.com>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by 
@@ -30,7 +30,7 @@ In order to build wmm, you must have gcc, xcb, and make available on your system
 
 # Usage
 
-## Starting wmm
+## Basic wmm usage
 
 In order to use wmm, simply put the following in your ~/.xinitrc:
 
@@ -38,6 +38,12 @@ In order to use wmm, simply put the following in your ~/.xinitrc:
    wmm
 
 This will start an xterm, send that xterm to a background process, and then start wmm.
+
+## Alternative wmm usage
+
+You can use xbindkeys to make window manager agnostic key bindings for launching
+processes. See `example_xinitrc` and `example_xbindkeysrc` for an example to bind
+dmenu to Mod4+p (the default keybinding from dwm).
 
 ## Keybindings
 

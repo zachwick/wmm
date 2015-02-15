@@ -1,0 +1,18 @@
+# Setup the Colemak key layout
+setxkbmap -layout us -variant colemak
+xmodmap -e "clear lock" -e "keycode 66 = Control_R" -c "add Control = Control_R"
+
+# Turn on xscreensaver
+xscreensaver -no-splash &
+
+# Turn the alert bell off
+xset b off
+
+# Turn off bluetooth (this may not actually work)
+echo 0 > /sys/devices/platform/thinkpad_acpi/bluetooth_enable
+
+# Start xbindkeys. See ~/.xbindkeysrc for key bindings
+xbindkeys
+
+# Start wmm
+exec wmm
